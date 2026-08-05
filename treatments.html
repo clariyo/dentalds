@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dental treatments in Bolton — general dentistry, cosmetic dentistry, dental implants, Invisalign, teeth whitening, veneers and more at Dental Design Studio.">
+  <title>Treatments | Dental Design Studio Bolton</title>
+  <link rel="icon" href="https://www.dentalds.co.uk/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .hero-treatments { background-image: url('https://www.dentalds.co.uk/images/featured-cosmetic-dentistry.jpg'); }
+    .treatment-section { padding: 80px 0; }
+    .treatment-section:nth-child(even) { background: var(--bg-section); }
+    .t-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 52px; }
+    .t-intro-img  { border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 16/10; }
+    .t-intro-img img { width:100%;height:100%;object-fit:cover; }
+    .t-section-id { padding-top: 80px; margin-top: -80px; } /* anchor offset for sticky nav */
+    @media(max-width:768px){ .t-intro-grid { grid-template-columns:1fr; gap:32px; } }
+    .mini-list { list-style:none; display:flex; flex-direction:column; gap:9px; margin-top:16px; }
+    .mini-list li { display:flex; gap:10px; font-size:.9rem; color:var(--text-light); }
+    .mini-list li i { color:var(--pink); flex-shrink:0; margin-top:3px; }
+    .treatments-sub-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:22px; margin-top:32px; }
+    .sub-card { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:24px; transition:var(--trans); }
+    .sub-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--pink); }
+    .sub-card-icon { font-size:1.6rem; color:var(--pink); margin-bottom:12px; }
+    .sub-card h4 { font-size:1rem; margin-bottom:6px; }
+    .sub-card p  { font-size:.85rem; color:var(--text-light); }
+    .price-chip { display:inline-block; background:var(--pink-light); color:var(--pink); font-size:.76rem; font-weight:700; padding:3px 10px; border-radius:50px; margin-top:10px; }
+    .section-anchor { display:block; height:var(--nav-h); margin-top:calc(-1 * var(--nav-h)); visibility:hidden; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#e4007e;">Dental Design Studio</span>
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="about.html"      class="dropdown-item">About the Practice</a>
+            <a href="about.html#team" class="dropdown-item">Meet the Team</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="treatments.html" class="nav-link active">Treatments <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="treatments.html#general"      class="dropdown-item">General Dentistry</a>
+            <a href="treatments.html#cosmetic"     class="dropdown-item">Cosmetic Dentistry</a>
+            <a href="treatments.html#implants"     class="dropdown-item">Dental Implants</a>
+            <a href="treatments.html#orthodontics" class="dropdown-item">Invisalign & Braces</a>
+            <a href="treatments.html#nervous"      class="dropdown-item">Nervous Patients</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li class="nav-item"><a href="fees.html"    class="nav-link">Fees</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:01204856833" class="navbar-phone"><i class="fas fa-phone-alt"></i>01204 856833</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html"               class="mobile-nav-link">Home</a>
+  <a href="about.html"               class="mobile-nav-link">About</a>
+  <a href="treatments.html"          class="mobile-nav-link">Treatments</a>
+  <a href="treatments.html#general"  class="mobile-nav-link mobile-nav-sub">↳ General Dentistry</a>
+  <a href="treatments.html#cosmetic" class="mobile-nav-link mobile-nav-sub">↳ Cosmetic Dentistry</a>
+  <a href="treatments.html#implants" class="mobile-nav-link mobile-nav-sub">↳ Dental Implants</a>
+  <a href="treatments.html#orthodontics" class="mobile-nav-link mobile-nav-sub">↳ Invisalign & Braces</a>
+  <a href="treatments.html#nervous"  class="mobile-nav-link mobile-nav-sub">↳ Nervous Patients</a>
+  <a href="reviews.html"             class="mobile-nav-link">Reviews</a>
+  <a href="fees.html"                class="mobile-nav-link">Fees</a>
+  <a href="contact.html"             class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-cta">
+    <a href="tel:01204856833" class="btn btn-secondary"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    <a href="contact.html"    class="btn btn-primary">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sm hero-treatments">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Treatments</span></div>
+      <h1>Our Treatments</h1>
+      <p class="hero-lead">From routine check-ups to complete smile transformations. Expert dental care for every need.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
+        <a href="#general"      class="btn btn-outline-white btn-sm">General</a>
+        <a href="#cosmetic"     class="btn btn-outline-white btn-sm">Cosmetic</a>
+        <a href="#implants"     class="btn btn-outline-white btn-sm">Implants</a>
+        <a href="#orthodontics" class="btn btn-outline-white btn-sm">Orthodontics</a>
+        <a href="#nervous"      class="btn btn-outline-white btn-sm">Nervous Patients</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GENERAL DENTISTRY ═══════════════════════════════════ -->
+<span class="section-anchor" id="general"></span>
+<section class="treatment-section">
+  <div class="container">
+    <div class="t-intro-grid">
+      <div class="fade-up">
+        <span class="section-label">General Dentistry</span>
+        <h2 style="margin-top:8px;margin-bottom:16px;">The Foundation of a Healthy Smile</h2>
+        <p class="lead" style="margin-bottom:16px;">Regular dental care is the cornerstone of long-term oral health. At Dental Design Studio, our general dentistry services go far beyond a routine check-up — we offer comprehensive care that protects and maintains your teeth for life.</p>
+        <p style="margin-bottom:20px;">Every examination includes an oral cancer screening, gum disease assessment, toothwear and caries risk analysis, and a digital photographic tour of your mouth — giving you a full picture of your dental health.</p>
+        <a href="contact.html" class="btn btn-primary">Book a Check-Up</a>
+      </div>
+      <div class="t-intro-img fade-up fd2">
+        <img src="https://www.dentalds.co.uk/images/featured-general-dentistry.jpg" alt="General Dentistry" loading="lazy">
+      </div>
+    </div>
+    <div class="treatments-sub-grid">
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-search"></i></div>
+        <h4>Dental Examinations</h4>
+        <p>Comprehensive oral health check including cancer screening, periodontal assessment, digital photos and a full treatment plan.</p>
+        <span class="price-chip">From £49</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-spray-can"></i></div>
+        <h4>Dental Hygiene</h4>
+        <p>Professional cleaning and descaling to remove plaque and tartar. Personalised oral hygiene advice to prevent gum disease.</p>
+        <span class="price-chip">From £85</span>
+      </div>
+      <div class="sub-card fade-up fd2">
+        <div class="sub-card-icon"><i class="fas fa-fill-drip"></i></div>
+        <h4>White Fillings</h4>
+        <p>Tooth-coloured composite resin fillings that blend seamlessly with your natural teeth — no more unsightly metal.</p>
+        <span class="price-chip">From £120</span>
+      </div>
+      <div class="sub-card fade-up fd3">
+        <div class="sub-card-icon"><i class="fas fa-crown"></i></div>
+        <h4>Dental Crowns</h4>
+        <p>Custom-made porcelain or ceramic crowns to restore damaged, broken or weakened teeth to full function and beauty.</p>
+        <span class="price-chip">From £695</span>
+      </div>
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-link"></i></div>
+        <h4>Dental Bridges</h4>
+        <p>Traditional fixed, cantilever, resin-bonded and implant-supported bridges to replace one or more missing teeth.</p>
+        <span class="price-chip">From £695</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-procedures"></i></div>
+        <h4>Root Canal Treatment</h4>
+        <p>Gentle, effective treatment to save an infected tooth and relieve pain, preserving your natural smile.</p>
+        <span class="price-chip">Ask for price</span>
+      </div>
+      <div class="sub-card fade-up fd2">
+        <div class="sub-card-icon"><i class="fas fa-heartbeat"></i></div>
+        <h4>Gum Disease Treatment</h4>
+        <p>Diagnosis and management of periodontal disease using the latest techniques to protect your gums and bone.</p>
+        <span class="price-chip">From £375</span>
+      </div>
+      <div class="sub-card fade-up fd3">
+        <div class="sub-card-icon"><i class="fas fa-ambulance"></i></div>
+        <h4>Dental Emergencies</h4>
+        <p>Emergency dental appointments available. 24-hour out-of-hours service for urgent dental problems.</p>
+        <span class="price-chip">Same-Day Available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COSMETIC DENTISTRY ════════════════════════════════ -->
+<span class="section-anchor" id="cosmetic"></span>
+<section class="treatment-section">
+  <div class="container">
+    <div class="t-intro-grid" style="direction:rtl">
+      <div class="fade-up" style="direction:ltr">
+        <span class="section-label">Cosmetic Dentistry</span>
+        <h2 style="margin-top:8px;margin-bottom:16px;">The Smile You've Always Wanted</h2>
+        <p class="lead" style="margin-bottom:16px;">Our cosmetic dentistry specialists combine artistry with the latest techniques to create truly stunning, natural-looking smile transformations. Dr Mitha's training with the legendary Dr Larry Rosenthal in New York is reflected in every smile we create.</p>
+        <p style="margin-bottom:20px;">We specialise in minimally invasive cosmetic dentistry — many treatments require no drilling, no injections and no removal of healthy tooth structure.</p>
+        <a href="contact.html" class="btn btn-primary">Book a Smile Consultation</a>
+      </div>
+      <div class="t-intro-img fade-up fd2" style="direction:ltr">
+        <img src="https://www.dentalds.co.uk/images/featured-cosmetic-dentistry.jpg" alt="Cosmetic Dentistry" loading="lazy">
+      </div>
+    </div>
+    <div class="treatments-sub-grid">
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-magic"></i></div>
+        <h4>Smile Makeovers</h4>
+        <p>A bespoke combination of treatments designed to completely transform your smile — tailored to your face, personality and goals.</p>
+        <span class="price-chip">Bespoke Pricing</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>Composite Veneers / Bonding</h4>
+        <p>Transform chipped, stained or misshapen teeth with composite bonding — no drilling, no injections. Natural-looking results in one visit.</p>
+        <span class="price-chip">From £275/tooth</span>
+      </div>
+      <div class="sub-card fade-up fd2">
+        <div class="sub-card-icon"><i class="fas fa-gem"></i></div>
+        <h4>Porcelain Veneers</h4>
+        <p>Ultra-thin porcelain veneers crafted by expert dental ceramists. The gold standard in cosmetic smile transformation.</p>
+        <span class="price-chip">From £695/tooth</span>
+      </div>
+      <div class="sub-card fade-up fd3">
+        <div class="sub-card-icon"><i class="fas fa-sun"></i></div>
+        <h4>Teeth Whitening</h4>
+        <p>Professional home whitening kits for gradual brightening, or Enlighten in-surgery whitening for dramatic same-day results.</p>
+        <span class="price-chip">From £575</span>
+      </div>
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-smile"></i></div>
+        <h4>Smile Design</h4>
+        <p>Comprehensive smile design analysis using digital photography and mock-ups — see your new smile before treatment begins.</p>
+        <span class="price-chip">Consultation £75</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-theater-masks"></i></div>
+        <h4>Cosmetic Dentures</h4>
+        <p>High-quality, natural-looking dentures (full, partial acrylic and chrome) crafted for comfort, function and aesthetics.</p>
+        <span class="price-chip">From £475</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DENTAL IMPLANTS ════════════════════════════════════ -->
+<span class="section-anchor" id="implants"></span>
+<section class="treatment-section">
+  <div class="container">
+    <div class="t-intro-grid">
+      <div class="fade-up">
+        <span class="section-label">Dental Implants</span>
+        <h2 style="margin-top:8px;margin-bottom:16px;">Permanent Solutions for Missing Teeth</h2>
+        <p class="lead" style="margin-bottom:16px;">Dental implants are the gold standard solution for replacing missing teeth. They look, feel and function just like natural teeth, and with proper care they can last a lifetime.</p>
+        <p style="margin-bottom:20px;">Our implant surgeon Ferhan Ahmed is a specialist in complex implant cases. From single-tooth replacements to full arch All-on-4/5 restorations, we have the expertise to give you back your smile and confidence.</p>
+        <ul class="mini-list" style="margin-bottom:24px;">
+          <li><i class="fas fa-check-circle"></i>Single tooth implants from £2,200</li>
+          <li><i class="fas fa-check-circle"></i>Full arch All-on-4/5 implant bridges</li>
+          <li><i class="fas fa-check-circle"></i>Implant-supported dentures and bridges</li>
+          <li><i class="fas fa-check-circle"></i>IV sedation available for nervous patients</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Book Implant Consultation</a>
+      </div>
+      <div class="t-intro-img fade-up fd2">
+        <img src="https://www.dentalds.co.uk/images/featured-dental-implants.jpg" alt="Dental Implants" loading="lazy">
+      </div>
+    </div>
+    <div class="treatments-sub-grid">
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-circle-notch"></i></div>
+        <h4>Single Tooth Implant</h4>
+        <p>Replace a single missing tooth with a titanium implant and natural-looking crown — no impact on adjacent teeth.</p>
+        <span class="price-chip">From £2,200</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-th-large"></i></div>
+        <h4>Multiple Implants</h4>
+        <p>Replace several missing teeth in different areas of the mouth with individual implant restorations.</p>
+        <span class="price-chip">From £2,200 each</span>
+      </div>
+      <div class="sub-card fade-up fd2">
+        <div class="sub-card-icon"><i class="fas fa-minus"></i></div>
+        <h4>Implant-Supported Bridge</h4>
+        <p>A bridge supported by two or more implants — ideal for replacing several adjacent missing teeth.</p>
+        <span class="price-chip">From £3,500</span>
+      </div>
+      <div class="sub-card fade-up fd3">
+        <div class="sub-card-icon"><i class="fas fa-redo"></i></div>
+        <h4>All-on-4 / All-on-5</h4>
+        <p>Full arch restoration supported by just four or five implants. Fixed, beautiful teeth in a single treatment course.</p>
+        <span class="price-chip">From £16,000/arch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ORTHODONTICS ═══════════════════════════════════════ -->
+<span class="section-anchor" id="orthodontics"></span>
+<section class="treatment-section">
+  <div class="container">
+    <div class="t-intro-grid" style="direction:rtl">
+      <div class="fade-up" style="direction:ltr">
+        <span class="section-label">Orthodontics</span>
+        <h2 style="margin-top:8px;margin-bottom:16px;">Straighter Teeth, Beautifully Aligned</h2>
+        <p class="lead" style="margin-bottom:16px;">Modern orthodontics has never been more comfortable or discreet. Whether you choose Invisalign clear aligners or Six Month Smiles fixed braces, we'll create a straighter smile that transforms your confidence.</p>
+        <p style="margin-bottom:20px;">Dr Mitha has a special interest in orthodontics and has helped hundreds of patients achieve the beautifully straight teeth they've always wanted.</p>
+        <a href="contact.html" class="btn btn-primary">Book Orthodontic Consultation</a>
+      </div>
+      <div class="t-intro-img fade-up fd2" style="direction:ltr">
+        <img src="https://www.dentalds.co.uk/images/featured-invisalign-braces.jpg" alt="Invisalign Bolton" loading="lazy">
+      </div>
+    </div>
+    <div class="treatments-sub-grid">
+      <div class="sub-card fade-up">
+        <div class="sub-card-icon"><i class="fas fa-align-center"></i></div>
+        <h4>Invisalign</h4>
+        <p>The world's leading clear aligner system. Virtually invisible, removable aligners that gently move teeth into position over time.</p>
+        <span class="price-chip">From £2,000</span>
+      </div>
+      <div class="sub-card fade-up fd1">
+        <div class="sub-card-icon"><i class="fas fa-stopwatch"></i></div>
+        <h4>Six Month Smiles</h4>
+        <p>Short-term fixed orthodontics using tooth-coloured brackets and wires. Most cases complete in just 4–9 months.</p>
+        <span class="price-chip">From £2,000</span>
+      </div>
+      <div class="sub-card fade-up fd2">
+        <div class="sub-card-icon"><i class="fas fa-layer-group"></i></div>
+        <h4>Dual Arch Treatment</h4>
+        <p>Straighten both upper and lower arches simultaneously for comprehensive results. Available in Invisalign and fixed options.</p>
+        <span class="price-chip">From £3,000</span>
+      </div>
+      <div class="sub-card fade-up fd3">
+        <div class="sub-card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Retainers</h4>
+        <p>Custom-fitted retainers following orthodontic treatment to maintain your perfectly straight smile long-term.</p>
+        <span class="price-chip">Included in plan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NERVOUS PATIENTS ══════════════════════════════════ -->
+<span class="section-anchor" id="nervous"></span>
+<section class="treatment-section" style="background:var(--dark);">
+  <div class="container">
+    <div class="t-intro-grid">
+      <div class="fade-up">
+        <span class="section-label" style="color:rgba(255,255,255,.5)">Nervous Patients</span>
+        <h2 style="margin-top:8px;margin-bottom:16px;color:var(--white);">You're in Safe, Gentle Hands</h2>
+        <p style="color:rgba(255,255,255,.72);font-size:1.08rem;margin-bottom:16px;">We understand that visiting the dentist can be daunting. At Dental Design Studio, we have a deeply experienced team who specialise in caring for nervous and anxious patients.</p>
+        <p style="color:rgba(255,255,255,.65);margin-bottom:20px;">Our hygienist Priyanka is also a qualified hypnotherapist — uniquely placed to help patients overcome dental phobia, needle anxiety and strong gag reflex. We also offer IV conscious sedation so you can receive treatment in a completely relaxed, comfortable state.</p>
+        <ul class="mini-list" style="margin-bottom:24px;">
+          <li style="color:rgba(255,255,255,.72)"><i class="fas fa-check-circle" style="color:var(--pink)"></i>Free treatment coordinator consultation — no obligation</li>
+          <li style="color:rgba(255,255,255,.72)"><i class="fas fa-check-circle" style="color:var(--pink)"></i>Friendly, unhurried appointments — always at your pace</li>
+          <li style="color:rgba(255,255,255,.72)"><i class="fas fa-check-circle" style="color:var(--pink)"></i>Hypnotherapy support available for dental phobia</li>
+          <li style="color:rgba(255,255,255,.72)"><i class="fas fa-check-circle" style="color:var(--pink)"></i>IV conscious sedation — feel completely at ease</li>
+          <li style="color:rgba(255,255,255,.72)"><i class="fas fa-check-circle" style="color:var(--pink)"></i>Calm, welcoming environment with TVs, Wi-Fi and refreshments</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+      </div>
+      <div class="t-intro-img fade-up fd2">
+        <img src="https://www.dentalds.co.uk/images/featured-nervous-patients.jpg" alt="Nervous Patients Care" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(255,255,255,.6)">Next Steps</span>
+    <h2>Not Sure Which Treatment Is Right for You?</h2>
+    <p>Our free Treatment Coordinator consultation will help you understand all your options, with no pressure and no obligation. Call us or book online today.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html"     class="btn btn-white btn-lg">Book Free Consultation</a>
+      <a href="tel:01204856833" class="btn btn-outline-white btn-lg"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display:'none'">
+        <p>5-star rated private dentist in Edgworth, Bolton. Specialists in cosmetic and restorative dentistry.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/DENTAL-DESIGN-STUDIO-179560879919/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dental_design_studio/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/441204856833" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html"      class="footer-link">About the Practice</a></li>
+          <li><a href="about.html#team" class="footer-link">Meet the Team</a></li>
+          <li><a href="treatments.html" class="footer-link">All Treatments</a></li>
+          <li><a href="reviews.html"    class="footer-link">Patient Reviews</a></li>
+          <li><a href="fees.html"       class="footer-link">Fees & Finance</a></li>
+          <li><a href="contact.html"    class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Treatments</h4>
+        <ul class="footer-links">
+          <li><a href="#general"      class="footer-link">General Dentistry</a></li>
+          <li><a href="#cosmetic"     class="footer-link">Cosmetic Dentistry</a></li>
+          <li><a href="#implants"     class="footer-link">Dental Implants</a></li>
+          <li><a href="#orthodontics" class="footer-link">Invisalign</a></li>
+          <li><a href="#nervous"      class="footer-link">Nervous Patients</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>12 Bury Road, Edgworth, Bolton, BL7 0AY</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span><a href="tel:01204856833">01204 856833</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:info@dentalds.co.uk">info@dentalds.co.uk</a></span></div>
+        <div class="footer-contact-item"><i class="far fa-clock"></i><span>Mon–Tue: 9am–5:30pm<br>Thu: 9am–8pm<br>Sat: 9am–12:30pm</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.07)">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dental Design Studio. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="https://www.dentalds.co.uk/privacy.html" target="_blank">Privacy Policy</a>
+          <a href="https://www.dentalds.co.uk/cookies.html" target="_blank">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/441204856833" class="whatsapp-fab" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dental Design Studio — 5-star rated private dentist in Edgworth, Bolton. Expert cosmetic & general dentistry, dental implants, Invisalign & smile makeovers. Call 01204 856833.">
+  <title>Dental Design Studio | 5★ Private Dentist Bolton</title>
+  <link rel="icon" href="https://www.dentalds.co.uk/favicon.ico">
+  <link rel="apple-touch-icon" href="https://www.dentalds.co.uk/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Page-specific extras */
+    .hero-home {
+      background-image: url('https://www.dentalds.co.uk/images/why-choose-us-bg.jpg');
+    }
+    .reviews-section { background: var(--dark); padding: 96px 0; }
+    .reviews-header-inner { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; margin-bottom: 56px; }
+    @media(max-width:768px){ .reviews-header-inner { grid-template-columns: 1fr; gap: 28px; } }
+    .team-preview { background: var(--bg-section); }
+    .offers-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 24px; }
+    .why-bg {
+      background: url('https://www.dentalds.co.uk/images/enquiries-bg.jpg') center/cover no-repeat;
+      position: relative;
+    }
+    .why-bg::before { content:''; position:absolute; inset:0; background:rgba(28,28,30,.82); }
+    .why-bg > .container { position: relative; z-index:1; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#e4007e;">Dental Design Studio</span>
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="about.html" class="dropdown-item"><i class="fas fa-building" style="width:16px;color:var(--pink);margin-right:4px"></i> About the Practice</a>
+            <a href="about.html#team" class="dropdown-item"><i class="fas fa-users" style="width:16px;color:var(--pink);margin-right:4px"></i> Meet the Team</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="treatments.html" class="nav-link">Treatments <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="treatments.html#general"      class="dropdown-item"><i class="fas fa-tooth" style="width:16px;color:var(--pink);margin-right:4px"></i> General Dentistry</a>
+            <a href="treatments.html#cosmetic"     class="dropdown-item"><i class="fas fa-star"  style="width:16px;color:var(--pink);margin-right:4px"></i> Cosmetic Dentistry</a>
+            <a href="treatments.html#implants"     class="dropdown-item"><i class="fas fa-circle-notch" style="width:16px;color:var(--pink);margin-right:4px"></i> Dental Implants</a>
+            <a href="treatments.html#orthodontics" class="dropdown-item"><i class="fas fa-align-center" style="width:16px;color:var(--pink);margin-right:4px"></i> Invisalign & Braces</a>
+            <a href="treatments.html#nervous"      class="dropdown-item"><i class="fas fa-heart" style="width:16px;color:var(--pink);margin-right:4px"></i> Nervous Patients</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li class="nav-item"><a href="fees.html"    class="nav-link">Fees</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:01204856833" class="navbar-phone"><i class="fas fa-phone-alt"></i>01204 856833</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html"               class="mobile-nav-link">Home</a>
+  <a href="about.html"               class="mobile-nav-link">About the Practice</a>
+  <a href="about.html#team"          class="mobile-nav-link mobile-nav-sub">↳ Meet the Team</a>
+  <a href="treatments.html"          class="mobile-nav-link">Treatments</a>
+  <a href="treatments.html#general"  class="mobile-nav-link mobile-nav-sub">↳ General Dentistry</a>
+  <a href="treatments.html#cosmetic" class="mobile-nav-link mobile-nav-sub">↳ Cosmetic Dentistry</a>
+  <a href="treatments.html#implants" class="mobile-nav-link mobile-nav-sub">↳ Dental Implants</a>
+  <a href="treatments.html#orthodontics" class="mobile-nav-link mobile-nav-sub">↳ Invisalign & Braces</a>
+  <a href="reviews.html"             class="mobile-nav-link">Patient Reviews</a>
+  <a href="fees.html"                class="mobile-nav-link">Fees & Finance</a>
+  <a href="contact.html"             class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-cta">
+    <a href="tel:01204856833" class="btn btn-secondary"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    <a href="contact.html"    class="btn btn-primary">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ HERO -->
+<section class="hero hero-home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="stars">★★★★★</span>
+        5-Star Rated Private Dentist · Bolton
+      </div>
+      <h1>Creating<br><em style="color:var(--pink);font-style:normal;">Beautiful</em> Smiles</h1>
+      <p class="hero-lead">Our knowledge of smile design and attention to detail make us unique. Minimally invasive, maximally beautiful.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book a Consultation</a>
+        <a href="treatments.html" class="btn btn-outline-white btn-lg">Our Treatments</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num" data-count="5.0" data-suffix="★">5.0★</span>
+          <span class="hero-stat-lbl">Google Rating</span>
+        </div>
+        <div>
+          <span class="hero-stat-num" data-count="137" data-suffix="+">137+</span>
+          <span class="hero-stat-lbl">Reviews</span>
+        </div>
+        <div>
+          <span class="hero-stat-num" data-count="20" data-suffix="+ yrs">20+ yrs</span>
+          <span class="hero-stat-lbl">Experience</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">0%</span>
+          <span class="hero-stat-lbl">Finance Available</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FEATURES -->
+<section class="section" style="padding-top:80px;padding-bottom:80px;">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Your Smile, Our Passion</h2>
+      <p class="section-sub">A highly skilled team dedicated to giving you the very best in private dental care.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><i class="fas fa-star"></i></div>
+        <h4>5-Star Rated</h4>
+        <p>137 glowing Google reviews from patients across Bolton and Greater Manchester. Our patients' satisfaction is our greatest measure of success.</p>
+      </div>
+      <div class="feature-card fade-up fd1">
+        <div class="feature-icon"><i class="fas fa-award"></i></div>
+        <h4>Expert Team</h4>
+        <p>35+ years combined experience. Dr Riaz Mitha trained with world-renowned New York cosmetic dentist Dr Larry Rosenthal.</p>
+      </div>
+      <div class="feature-card fade-up fd2">
+        <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+        <h4>Minimally Invasive</h4>
+        <p>We specialise in preserving your natural teeth — improving your smile with minimal or no tooth preparation wherever possible.</p>
+      </div>
+      <div class="feature-card fade-up fd3">
+        <div class="feature-icon"><i class="fas fa-percentage"></i></div>
+        <h4>0% Finance</h4>
+        <p>Spread the cost of your treatment with up to 12 months interest-free credit, making your dream smile affordable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <span class="stat-num" data-count="20" data-suffix="+">20+</span>
+        <span class="stat-lbl">Years in Practice</span>
+      </div>
+      <div class="stat-item fade-up fd1">
+        <span class="stat-num" data-count="5" data-suffix="★" data-prefix="">5★</span>
+        <span class="stat-lbl">Average Rating</span>
+      </div>
+      <div class="stat-item fade-up fd2">
+        <span class="stat-num" data-count="137" data-suffix="+">137+</span>
+        <span class="stat-lbl">Happy Patients</span>
+      </div>
+      <div class="stat-item fade-up fd3">
+        <span class="stat-num" data-count="12" data-suffix="m 0%">12m 0%</span>
+        <span class="stat-lbl">Finance Available</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ TREATMENTS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Treatments</span>
+      <h2 class="section-title">Everything Your Smile Needs</h2>
+      <p class="section-sub">From routine check-ups to complete smile transformations — we offer a full range of private dental treatments.</p>
+    </div>
+    <div class="treatments-grid">
+      <article class="treatment-card fade-up">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-cosmetic-dentistry.jpg" alt="Cosmetic Dentistry" loading="lazy">
+          <span class="tc-badge">Popular</span>
+        </div>
+        <div class="tc-body">
+          <h3>Cosmetic Dentistry</h3>
+          <p>Smile makeovers, composite bonding, porcelain veneers and teeth whitening to transform your confidence.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">From</div><div class="tc-price-val">£275</div></div>
+          <a href="treatments.html#cosmetic" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+      <article class="treatment-card fade-up fd1">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-dental-implants.jpg" alt="Dental Implants" loading="lazy">
+          <span class="tc-badge">Specialist</span>
+        </div>
+        <div class="tc-body">
+          <h3>Dental Implants</h3>
+          <p>A fixed, permanent solution for missing teeth. Single implants, multiple implants, and All-on-4/5 bridges.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">From</div><div class="tc-price-val">£2,200</div></div>
+          <a href="treatments.html#implants" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+      <article class="treatment-card fade-up fd2">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-invisalign-braces.jpg" alt="Invisalign" loading="lazy">
+          <span class="tc-badge">Discreet</span>
+        </div>
+        <div class="tc-body">
+          <h3>Invisalign & Braces</h3>
+          <p>Straighten your teeth discreetly with Invisalign clear aligners or Six Month Smiles fixed orthodontics.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">From</div><div class="tc-price-val">£2,000</div></div>
+          <a href="treatments.html#orthodontics" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+      <article class="treatment-card fade-up">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-teeth-whitening.jpg" alt="Teeth Whitening" loading="lazy">
+        </div>
+        <div class="tc-body">
+          <h3>Teeth Whitening</h3>
+          <p>Professional home whitening kits and Enlighten in-surgery whitening for a brilliantly bright smile.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">From</div><div class="tc-price-val">£575</div></div>
+          <a href="treatments.html#cosmetic" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+      <article class="treatment-card fade-up fd1">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-general-dentistry.jpg" alt="General Dentistry" loading="lazy">
+        </div>
+        <div class="tc-body">
+          <h3>General Dentistry</h3>
+          <p>Comprehensive examinations, hygiene visits, white fillings, crowns, bridges and root canal treatment.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">From</div><div class="tc-price-val">£49</div></div>
+          <a href="treatments.html#general" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+      <article class="treatment-card fade-up fd2">
+        <div class="tc-img">
+          <img src="https://www.dentalds.co.uk/images/featured-nervous-patients.jpg" alt="Nervous Patients" loading="lazy">
+        </div>
+        <div class="tc-body">
+          <h3>Nervous Patients</h3>
+          <p>A gentle, caring approach for anxious patients. IV sedation available and a dedicated hypnotherapist on the team.</p>
+        </div>
+        <div class="tc-footer">
+          <div><div class="tc-price-label">Specialist</div><div class="tc-price-val">Care</div></div>
+          <a href="treatments.html#nervous" class="btn btn-secondary btn-sm">Learn More</a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="treatments.html" class="btn btn-primary btn-lg">View All Treatments</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ GOOGLE REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header-inner">
+      <div class="rating-block fade-up" style="min-width:220px;">
+        <span class="rating-num">5.0</span>
+        <span class="rating-stars-lg">★★★★★</span>
+        <div class="rating-lbl">137 Google Reviews</div>
+        <a href="https://www.google.com/maps/place/Dental+Design+Studio/@53.6471652,-2.394313,17z" target="_blank" rel="noopener" class="btn btn-outline-white btn-sm" style="margin-top:20px;width:100%;justify-content:center;">
+          <i class="fab fa-google"></i> See All Reviews
+        </a>
+      </div>
+      <div class="fade-up fd1">
+        <span class="section-label" style="color:rgba(255,255,255,.5)">Patient Reviews</span>
+        <h2 style="color:var(--white);margin-bottom:14px;">What Our Patients Say</h2>
+        <p style="color:rgba(255,255,255,.65);font-size:1.05rem;max-width:520px;">We're proud of every smile we create. Here's what our patients have to say about their experience at Dental Design Studio.</p>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="reviews-carousel">
+      <div class="reviews-track" id="reviewsTrack">
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The consultation and treatment I received from Riaz was explained thoroughly. His professional, gentle and reassuring manner along with his unquestionable knowledge gave me the confidence to proceed with composite veneers. He is a perfectionist and I am absolutely thrilled with the results. I can't stop smiling!"</p>
+          <div class="review-author">
+            <div class="review-avatar">MH</div>
+            <div>
+              <div class="review-name">Mary Holowaty</div>
+              <div class="review-date">Composite Veneers</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I'd always been self conscious about the gap in my front teeth. From my first consultation I knew I was in safe hands. I am absolutely over the moon with the final result — it looks completely natural and has changed my confidence completely."</p>
+          <div class="review-author">
+            <div class="review-avatar">LB</div>
+            <div>
+              <div class="review-name">Leanne Brown</div>
+              <div class="review-date">July 2026</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I cannot recommend Riaz highly enough. Being a nervous patient, his expertise and care immediately put me at ease. I am delighted with the excellent results of the treatment."</p>
+          <div class="review-author">
+            <div class="review-avatar">ML</div>
+            <div>
+              <div class="review-name">Michelle Latham</div>
+              <div class="review-date">Nervous Patient</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Have recently completed 10 months of treatment with Riaz for a smile makeover. I had 6 very old porcelain veneers, tooth crowding and gum recession — a challenge for anyone! The treatment I received was superb, I am delighted with the outcome."</p>
+          <div class="review-author">
+            <div class="review-avatar">VS</div>
+            <div>
+              <div class="review-name">V. Sheppard</div>
+              <div class="review-date">Smile Makeover</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I was referred here by my local dentist due to my complex case caused by my cleft lip and palate. Riaz and the team have done an amazing job. I couldn't be more delighted with my smile."</p>
+          <div class="review-author">
+            <div class="review-avatar">NH</div>
+            <div>
+              <div class="review-name">Nikki Hartley</div>
+              <div class="review-date">June 2026</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I have now had two dental implants at Dental Design Studio and both are superb. The first was ten years ago and I have never had any issues whatsoever with it. The second has been equally faultless."</p>
+          <div class="review-author">
+            <div class="review-avatar">SC</div>
+            <div>
+              <div class="review-name">Simon Col</div>
+              <div class="review-date">Dental Implants</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"I came to Riaz as an emergency when one of my front teeth fell out. He fitted me in the same day. I've been with Riaz and the team for 2 years now and I'm delighted my teeth and gums are healthy again."</p>
+          <div class="review-author">
+            <div class="review-avatar">AU</div>
+            <div>
+              <div class="review-name">Anne Unsworth</div>
+              <div class="review-date">July 2026</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent dentist, can't recommend Riaz, Jill and the team highly enough. I initially went here for a brace treatment and have since had further cosmetic treatment. The results have been amazing."</p>
+          <div class="review-author">
+            <div class="review-avatar">HC</div>
+            <div>
+              <div class="review-name">H.C.</div>
+              <div class="review-date">Invisalign</div>
+            </div>
+            <div class="review-g-logo"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="carouselPrev" aria-label="Previous reviews"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="carouselNext" aria-label="Next reviews"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div style="text-align:center;margin-top:44px;">
+      <a href="reviews.html" class="btn btn-outline-white btn-lg">Read All Reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ TEAM PREVIEW -->
+<section class="section team-preview">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Team</span>
+      <h2 class="section-title">Meet the Experts Behind Your Smile</h2>
+      <p class="section-sub">A highly trained, experienced team committed to exceptional patient care.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <div class="team-img">
+          <img src="https://www.dentalds.co.uk/images/dr-riaz-grey.png" alt="Dr Riaz Mitha" loading="lazy">
+        </div>
+        <div class="team-body">
+          <h3>Dr Riaz Mitha</h3>
+          <div class="team-role">Principal Dentist & Owner</div>
+          <div class="team-qual">BDS, MSc — Cosmetic, Aesthetic & Implant Dentist</div>
+          <p style="font-size:.85rem;color:var(--text-light)">Trained with world-renowned Dr Larry Rosenthal in New York. Over 20 years of expertise in cosmetic and restorative dentistry.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up fd1">
+        <div class="team-img">
+          <img src="https://www.dentalds.co.uk/images/ferhan-grey.png" alt="Ferhan Ahmed" loading="lazy">
+        </div>
+        <div class="team-body">
+          <h3>Ferhan Ahmed</h3>
+          <div class="team-role">Implant Surgeon</div>
+          <div class="team-qual">BDS (Glasg), MFDS RCPS, MBChB</div>
+          <p style="font-size:.85rem;color:var(--text-light)">Specialist in oral surgery and dental sedation. Member of the Association of Dental Implantology.</p>
+        </div>
+      </div>
+      <div class="team-card fade-up fd2">
+        <div class="team-img">
+          <img src="https://www.dentalds.co.uk/images/priyanka.png" alt="Priyanka Gupta" loading="lazy">
+        </div>
+        <div class="team-body">
+          <h3>Priyanka Gupta</h3>
+          <div class="team-role">Hygienist & Hypnotherapist</div>
+          <div class="team-qual">Dental Hygienist, GDC Registered</div>
+          <p style="font-size:.85rem;color:var(--text-light)">Specialist in supporting nervous and anxious patients. Known for her gentle, patient-centred approach.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="about.html#team" class="btn btn-secondary btn-lg">Meet the Full Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ WHY US / TESTIMONIAL -->
+<section class="section why-bg">
+  <div class="container">
+    <div style="max-width:640px;margin:0 auto;text-align:center;">
+      <span class="section-label" style="color:rgba(255,255,255,.5)">Our Philosophy</span>
+      <h2 style="color:var(--white);font-style:italic;margin:14px 0 20px;">"You're never fully dressed without a smile."</h2>
+      <p style="color:rgba(255,255,255,.7);font-size:1.05rem;margin-bottom:36px;">At Dental Design Studio we believe every patient deserves a smile they're proud of. Our combination of artistry, technical expertise and genuine care sets us apart.</p>
+      <a href="about.html" class="btn btn-white btn-lg">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ SPECIAL OFFERS -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color:rgba(255,255,255,.5)">Special Offers</span>
+      <h2 style="color:var(--white)">Great Value, Exceptional Care</h2>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card fade-up">
+        <span class="offer-badge">New Patients</span>
+        <h3>Initial Consultation</h3>
+        <p>Complete oral health assessment, oral cancer screening, digital photographic tour and smile analysis.</p>
+        <div style="font-size:1.8rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--pink);margin-bottom:16px;">£75</div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <div class="offer-card fade-up fd1">
+        <h3>Home Whitening Kit</h3>
+        <p>Custom upper and lower whitening trays plus professional whitening gel — results from the first use.</p>
+        <div style="font-size:1.8rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--pink);margin-bottom:16px;">£575</div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <div class="offer-card fade-up fd2">
+        <h3>Denplan Essentials</h3>
+        <p>2 dental exams, 2 hygiene visits per year, free X-rays, 10% off non-cosmetic treatment, and emergency cover.</p>
+        <div style="font-size:1.8rem;font-family:'Playfair Display',serif;font-weight:700;color:var(--pink);margin-bottom:4px;">£21.40<span style="font-size:1rem;font-weight:400;color:rgba(255,255,255,.5)">/month</span></div>
+        <a href="fees.html#denplan" class="btn btn-primary btn-sm" style="margin-top:12px;">Find Out More</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:20px;">
+      <p style="color:rgba(255,255,255,.45);font-size:.85rem;">Also available: 0% interest-free credit for up to 12 months on most treatments. <a href="fees.html" style="color:var(--pink)">See all fees</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FINANCE BANNER -->
+<section class="section-sm" style="background:var(--bg-section);">
+  <div class="container">
+    <div class="finance-banner fade-up">
+      <div>
+        <h3>0% Interest-Free Finance</h3>
+        <p>Spread the cost of your dental treatment over up to 12 months with zero interest. Your perfect smile doesn't have to wait.</p>
+        <a href="fees.html" class="btn btn-white" style="margin-top:18px;">View Fees & Finance</a>
+      </div>
+      <div class="finance-pct">0%<br><span style="font-size:1.1rem;font-weight:600;color:rgba(255,255,255,.7)">Interest-Free</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(255,255,255,.6)">Ready to begin?</span>
+    <h2>Start Your Smile Journey Today</h2>
+    <p>Call us on 01204 856833 or book your free treatment coordinator consultation online.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-white btn-lg">Book Appointment</a>
+      <a href="tel:01204856833" class="btn btn-outline-white btn-lg"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display='none'">
+        <p>5-star rated private dentist in Edgworth, Bolton. Specialists in cosmetic and restorative dentistry, committed to creating beautiful, lasting smiles.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/DENTAL-DESIGN-STUDIO-179560879919/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dental_design_studio/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/441204856833" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html"     class="footer-link">About the Practice</a></li>
+          <li><a href="about.html#team" class="footer-link">Meet the Team</a></li>
+          <li><a href="treatments.html" class="footer-link">Treatments</a></li>
+          <li><a href="reviews.html"   class="footer-link">Patient Reviews</a></li>
+          <li><a href="fees.html"      class="footer-link">Fees & Finance</a></li>
+          <li><a href="contact.html"   class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Treatments</h4>
+        <ul class="footer-links">
+          <li><a href="treatments.html#cosmetic"     class="footer-link">Smile Makeovers</a></li>
+          <li><a href="treatments.html#cosmetic"     class="footer-link">Teeth Whitening</a></li>
+          <li><a href="treatments.html#cosmetic"     class="footer-link">Composite Veneers</a></li>
+          <li><a href="treatments.html#implants"     class="footer-link">Dental Implants</a></li>
+          <li><a href="treatments.html#orthodontics" class="footer-link">Invisalign</a></li>
+          <li><a href="treatments.html#general"      class="footer-link">General Dentistry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>12 Bury Road, Edgworth, Bolton, BL7 0AY</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span><a href="tel:01204856833">01204 856833</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:info@dentalds.co.uk">info@dentalds.co.uk</a></span></div>
+        <div class="footer-contact-item"><i class="far fa-clock"></i><span>Mon–Tue: 9am–5:30pm<br>Thu: 9am–8:00pm<br>Sat: 9am–12:30pm</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.07)">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 Dental Design Studio. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="https://www.dentalds.co.uk/privacy.html" target="_blank">Privacy Policy</a>
+          <a href="https://www.dentalds.co.uk/cookies.html" target="_blank">Cookie Policy</a>
+          <a href="https://www.cqc.org.uk/" target="_blank" rel="noopener">CQC Regulated</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/441204856833" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
