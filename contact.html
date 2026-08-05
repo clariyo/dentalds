@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dental Design Studio in Edgworth, Bolton. Call 01204 856833 or book online. Located at 12 Bury Road, Edgworth, BL7 0AY. Open Mon–Sat.">
+  <title>Contact Us | Dental Design Studio Bolton</title>
+  <link rel="icon" href="https://www.dentalds.co.uk/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .hero-contact { background-image: url('https://www.dentalds.co.uk/images/enquiries-bg.jpg'); }
+    .quick-contact-bar { background: var(--dark); padding: 0; }
+    .qc-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+    .qc-item { display:flex; align-items:center; gap:14px; padding:28px 32px; border-right:1px solid rgba(255,255,255,.07); transition:var(--trans-fast); text-decoration:none; }
+    .qc-item:hover { background:rgba(255,255,255,.04); }
+    .qc-item:last-child { border-right:none; }
+    .qc-icon { width:48px; height:48px; border-radius:50%; background:rgba(228,0,126,.15); color:var(--pink); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0; }
+    .qc-label { font-size:.74rem; color:rgba(255,255,255,.4); font-weight:700; text-transform:uppercase; letter-spacing:.12em; margin-bottom:3px; }
+    .qc-value { font-size:.95rem; font-weight:600; color:var(--white); }
+    @media(max-width:768px){ .qc-grid { grid-template-columns:1fr; } .qc-item { border-right:none; border-bottom:1px solid rgba(255,255,255,.07); } }
+    .emergency-box { background: linear-gradient(135deg,#7b0000,#b50000); border-radius:var(--radius-lg); padding:32px 36px; display:flex; align-items:center; gap:24px; }
+    .emergency-box h3 { color:var(--white); margin-bottom:6px; }
+    .emergency-box p  { color:rgba(255,255,255,.75); font-size:.9rem; }
+    @media(max-width:600px){ .emergency-box { flex-direction:column; text-align:center; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span style="display:none;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#e4007e;">Dental Design Studio</span>
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="about.html"      class="dropdown-item">About the Practice</a>
+            <a href="about.html#team" class="dropdown-item">Meet the Team</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="treatments.html" class="nav-link">Treatments <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="dropdown-menu">
+            <a href="treatments.html#general"      class="dropdown-item">General Dentistry</a>
+            <a href="treatments.html#cosmetic"     class="dropdown-item">Cosmetic Dentistry</a>
+            <a href="treatments.html#implants"     class="dropdown-item">Dental Implants</a>
+            <a href="treatments.html#orthodontics" class="dropdown-item">Invisalign & Braces</a>
+            <a href="treatments.html#nervous"      class="dropdown-item">Nervous Patients</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li class="nav-item"><a href="fees.html"    class="nav-link">Fees</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="tel:01204856833" class="navbar-phone"><i class="fas fa-phone-alt"></i>01204 856833</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Appointment</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html"   class="mobile-nav-link">Home</a>
+  <a href="about.html"   class="mobile-nav-link">About</a>
+  <a href="treatments.html" class="mobile-nav-link">Treatments</a>
+  <a href="reviews.html" class="mobile-nav-link">Reviews</a>
+  <a href="fees.html"    class="mobile-nav-link">Fees</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-cta">
+    <a href="tel:01204856833" class="btn btn-secondary"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    <a href="contact.html"    class="btn btn-primary">Book Appointment</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero-sm hero-contact">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Contact</span></div>
+      <h1>Get in Touch</h1>
+      <p class="hero-lead">We'd love to hear from you. Call us, send a message, or simply pop in — we're always happy to help.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK CONTACT BAR -->
+<div class="quick-contact-bar">
+  <div class="container" style="padding:0;">
+    <div class="qc-grid">
+      <a href="tel:01204856833" class="qc-item">
+        <div class="qc-icon"><i class="fas fa-phone-alt"></i></div>
+        <div><div class="qc-label">Call Us</div><div class="qc-value">01204 856833</div></div>
+      </a>
+      <a href="mailto:info@dentalds.co.uk" class="qc-item">
+        <div class="qc-icon"><i class="fas fa-envelope"></i></div>
+        <div><div class="qc-label">Email Us</div><div class="qc-value">info@dentalds.co.uk</div></div>
+      </a>
+      <a href="https://wa.me/441204856833" target="_blank" rel="noopener" class="qc-item">
+        <div class="qc-icon"><i class="fab fa-whatsapp"></i></div>
+        <div><div class="qc-label">WhatsApp</div><div class="qc-value">Message Us</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT GRID -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="fade-up">
+        <h2 style="margin-bottom:32px;">Practice Information</h2>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-lbl">Address</div>
+            <div class="contact-val">
+              Dental Design Studio<br>
+              12 Bury Road<br>
+              Edgworth<br>
+              Bolton, BL7 0AY
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <div class="contact-lbl">Phone</div>
+            <div class="contact-val"><a href="tel:01204856833">01204 856833</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-lbl">Email</div>
+            <div class="contact-val"><a href="mailto:info@dentalds.co.uk">info@dentalds.co.uk</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fab fa-whatsapp" style="color:#25D366;"></i></div>
+          <div>
+            <div class="contact-lbl">WhatsApp</div>
+            <div class="contact-val"><a href="https://wa.me/441204856833" target="_blank" rel="noopener" style="color:#25D366;">Chat on WhatsApp</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="far fa-clock"></i></div>
+          <div>
+            <div class="contact-lbl">Opening Hours</div>
+            <div style="margin-top:8px;">
+              <div class="hours-grid">
+                <div class="hours-row"><span>Monday</span><span>9:00am – 5:30pm</span></div>
+                <div class="hours-row"><span>Tuesday</span><span>9:00am – 5:30pm</span></div>
+                <div class="hours-row"><span>Wednesday</span><span>9:00am – 1:00pm</span></div>
+                <div class="hours-row"><span>Thursday</span><span>9:00am – 8:00pm</span></div>
+                <div class="hours-row closed"><span>Friday</span><span>Closed</span></div>
+                <div class="hours-row"><span>Saturday</span><span>9:00am – 12:30pm</span></div>
+                <div class="hours-row closed"><span>Sunday</span><span>Closed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <div style="font-size:.83rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;">Getting Here</div>
+          <p style="font-size:.9rem;color:var(--text-light);">Located in Edgworth village, just off the main road. Free parking available. Less than 20 minutes from Bolton town centre and easily accessible from across Greater Manchester.</p>
+          <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:var(--text-muted);"><i class="fas fa-parking" style="color:var(--pink)"></i>Free Parking</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:var(--text-muted);"><i class="fas fa-wheelchair" style="color:var(--pink)"></i>Disabled Access</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:var(--text-muted);"><i class="fas fa-wifi" style="color:var(--pink)"></i>Free Wi-Fi</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="fade-up fd2">
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3 style="margin-bottom:8px;">Book an Appointment</h3>
+          <p style="font-size:.9rem;color:var(--text-light);margin-bottom:28px;">Fill in the form below and we'll be in touch within 1 working day to confirm your appointment.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Smith" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="07700 000000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="treatment">Treatment of Interest</label>
+            <select id="treatment" name="treatment" class="form-control">
+              <option value="">— Select a treatment —</option>
+              <option>Initial Consultation / Check-up</option>
+              <option>Smile Makeover</option>
+              <option>Composite Veneers / Bonding</option>
+              <option>Porcelain Veneers</option>
+              <option>Teeth Whitening</option>
+              <option>Dental Implants</option>
+              <option>Invisalign / Braces</option>
+              <option>General Dentistry</option>
+              <option>Nervous Patient Enquiry</option>
+              <option>Dental Emergency</option>
+              <option>Denplan Enquiry</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message / Additional Information</label>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell us a bit about what you're looking for, or any specific concerns you'd like to discuss..."></textarea>
+          </div>
+
+          <div class="form-group" style="display:flex;align-items:flex-start;gap:10px;">
+            <input type="checkbox" id="consent" name="consent" style="margin-top:3px;flex-shrink:0;" required>
+            <label for="consent" style="font-size:.83rem;color:var(--text-light);">I consent to Dental Design Studio contacting me about my enquiry. Your details will be handled in accordance with our <a href="https://www.dentalds.co.uk/privacy.html" target="_blank" style="color:var(--pink)">Privacy Policy</a>.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Send Enquiry
+          </button>
+
+          <p style="font-size:.8rem;color:var(--text-muted);text-align:center;margin-top:14px;"><i class="fas fa-lock" style="color:var(--pink);"></i> Your information is safe and will never be shared with third parties.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section style="padding:0 0 80px;">
+  <div class="container">
+    <div class="map-container fade-up">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.842!2d-2.394313!3d53.647165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba15dee59cf67%3A0x6e0c90d6031847cb!2sDental%20Design%20Studio!5e0!3m2!1sen!2suk!4v1691000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Dental Design Studio Location Map">
+      </iframe>
+    </div>
+    <div style="text-align:center;margin-top:20px;">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Dental+Design+Studio,12+Bury+Road,Edgworth,Bolton,BL7+0AY" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fas fa-directions"></i> Get Directions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BOX -->
+<section class="section-sm" style="background:var(--bg-section);">
+  <div class="container">
+    <div class="emergency-box fade-up">
+      <div style="font-size:3rem;color:var(--white);flex-shrink:0;"><i class="fas fa-ambulance"></i></div>
+      <div>
+        <h3>Dental Emergency?</h3>
+        <p>Call us immediately on <strong>01204 856833</strong>. We offer same-day emergency appointments and a 24-hour out-of-hours service for urgent dental problems. Don't suffer in pain — we're here to help.</p>
+      </div>
+      <a href="tel:01204856833" class="btn btn-white" style="flex-shrink:0;"><i class="fas fa-phone-alt"></i>01204 856833</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.dentalds.co.uk/images/dental-design-studio-logo.png" alt="Dental Design Studio" onerror="this.style.display='none'">
+        <p>Award-winning private dentist in Edgworth, Bolton. Welcoming new patients — call today to book.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/DENTAL-DESIGN-STUDIO-179560879919/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dental_design_studio/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/441204856833" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html"      class="footer-link">About the Practice</a></li>
+          <li><a href="about.html#team" class="footer-link">Meet the Team</a></li>
+          <li><a href="treatments.html" class="footer-link">Treatments</a></li>
+          <li><a href="reviews.html"    class="footer-link">Patient Reviews</a></li>
+          <li><a href="fees.html"       class="footer-link">Fees & Finance</a></li>
+          <li><a href="contact.html"    class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Treatments</h4>
+        <ul class="footer-links">
+          <li><a href="treatments.html#cosmetic"     class="footer-link">Cosmetic Dentistry</a></li>
+          <li><a href="treatments.html#implants"     class="footer-link">Dental Implants</a></li>
+          <li><a href="treatments.html#orthodontics" class="footer-link">Invisalign</a></li>
+          <li><a href="treatments.html#general"      class="footer-link">General Dentistry</a></li>
+          <li><a href="treatments.html#nervous"      class="footer-link">Nervous Patients</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>12 Bury Road, Edgworth, Bolton, BL7 0AY</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span><a href="tel:01204856833">01204 856833</a></span></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><span><a href="mailto:info@dentalds.co.uk">info@dentalds.co.uk</a></span></div>
+        <div class="footer-contact-item"><i class="far fa-clock"></i><span>Mon–Tue: 9am–5:30pm<br>Thu: 9am–8pm<br>Sat: 9am–12:30pm</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.07)"><div class="container"><div class="footer-bottom"><span>&copy; 2026 Dental Design Studio. All rights reserved.</span><div class="footer-bottom-links"><a href="https://www.dentalds.co.uk/privacy.html" target="_blank">Privacy Policy</a><a href="https://www.dentalds.co.uk/cookies.html" target="_blank">Cookie Policy</a><a href="https://www.cqc.org.uk/" target="_blank" rel="noopener">CQC Regulated</a></div></div></div></div>
+</footer>
+
+<a href="https://wa.me/441204856833" class="whatsapp-fab" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+<script src="js/main.js"></script>
+</body>
+</html>
